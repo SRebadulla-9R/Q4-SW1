@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SW 1: JS MATH METHODS</title>
+
+  <!-- WEBSITE ICON -->
+  <link rel="icon" href="sandwich.png" type="image/png">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&family=Tilt+Neon&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <h1>Chicken Sandwich Price & Inventory Calculator</h1>
+
+      <center><h2>JS Math Method</h2></center>
+      <div class="section">
+    <h3>1. Determine the value of <strong>rounded price</strong></h3>
+    <p id="roundedPriceResult" class="result"></p>
+    <p class="explanation" id="roundedPriceExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>2. Determine the value of <strong>standard sandwiches</strong></h3>
+    <p id="standardSandwichesResult" class="result"></p>
+    <p class="explanation" id="standardSandwichesExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>3. Determine the value of <strong>absolute difference</strong></h3>
+    <p id="absoluteDifferenceResult" class="result"></p>
+    <p class="explanation" id="absoluteDifferenceExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>4. Determine the value of <strong>total cost</strong></h3>
+    <p id="totalCostResult" class="result"></p>
+    <p class="explanation" id="totalCostExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>5. Determine the value of <strong>max sales</strong></h3>
+    <p id="maxSalesResult" class="result"></p>
+    <p class="explanation" id="maxSalesExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h2>JS Math Method - Moderate</h2>
+
+    <h3>6. Determine the value of <strong>rounded price</strong> (after discount)</h3>
+    <p id="discountedPriceResult" class="result"></p>
+    <p class="explanation" id="discountedPriceExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>7. Determine the value of <strong>family pack</strong></h3>
+    <p id="familyPackResult" class="result"></p>
+    <p class="explanation" id="familyPackExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>8. Determine the value of <strong>final adjustment</strong></h3>
+    <p id="finalAdjustmentResult" class="result"></p>
+    <p class="explanation" id="finalAdjustmentExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>9. Determine the value of <strong>rounded total</strong></h3>
+    <p id="roundedTotalResult" class="result"></p>
+    <p class="explanation" id="roundedTotalExplanation"></p>
+  </div>
+
+  <div class="section">
+    <h3>10. Determine the value of <strong>averageSales</strong></h3>
+    <p id="averageSalesResult" class="result"></p>
+    <p class="explanation" id="averageSalesExplanation"></p>
+  </div>
+
+  <hr class="custom"> 
+  <footer class="text-center mt-5">
+    © Rebadulla | ICT 9 | Fourth Quarter | AY 2024-2025
+  </footer>
+
+  <script>
+    // JS Math Method - Easy
+    var sandwichPrice = 125.80;
+    var roundedPrice = Math.round(sandwichPrice);
+    document.getElementById('roundedPriceResult').innerText = roundedPrice;
+    document.getElementById('roundedPriceExplanation').innerText = 'The Math.round() method rounds the price ' + sandwichPrice + ' to the nearest integer, resulting in ' + roundedPrice + '.';
+
+    var miniSandwiches = 81;
+    var standardSandwiches = Math.sqrt(miniSandwiches);
+    document.getElementById('standardSandwichesResult').innerText = standardSandwiches;
+    document.getElementById('standardSandwichesExplanation').innerText = 'The Math.sqrt() method calculates the square root of ' + miniSandwiches + ', resulting in ' + standardSandwiches + '.';
+
+    var priceDifference = -15.50;
+    var absoluteDifference = Math.abs(priceDifference);
+    document.getElementById('absoluteDifferenceResult').innerText = absoluteDifference;
+    document.getElementById('absoluteDifferenceExplanation').innerText = 'The Math.abs() method returns the absolute value of ' + priceDifference + ', which is ' + absoluteDifference + '.';
+
+    var basePrice = 150;
+    var totalCost = basePrice ** 2;
+    document.getElementById('totalCostResult').innerText = totalCost;
+    document.getElementById('totalCostExplanation').innerText = 'The ** operator calculates the square of the base price ' + basePrice + ', resulting in ' + totalCost + '.';
+
+    var dailySales = [2500, 3200, 2800, 3500];
+    var maxSales = Math.max(...dailySales);
+    document.getElementById('maxSalesResult').innerText = maxSales;
+    document.getElementById('maxSalesExplanation').innerText = 'The Math.max() method returns the highest value from the array, which is ' + maxSales + '.';
+
+    // JS Math Method - Moderate
+    var sandwichPrice2 = 135.75;
+    var discountedPrice = sandwichPrice2 - (sandwichPrice2 * 0.15);
+    var roundedPrice2 = Math.round(discountedPrice);
+    document.getElementById('discountedPriceResult').innerText = roundedPrice2;
+    document.getElementById('discountedPriceExplanation').innerText = 'After applying a 15% discount to ' + sandwichPrice2 + ', the price is ' + discountedPrice + ', which rounds to ' + roundedPrice2 + '.';
+
+    var miniSandwiches2 = 121;
+    var standardSandwiches2 = Math.sqrt(miniSandwiches2);
+    var familyPack = Math.pow(standardSandwiches2, 2);
+    document.getElementById('familyPackResult').innerText = familyPack;
+    document.getElementById('familyPackExplanation').innerText = 'The Math.pow() method calculates the square of the number of standard sandwiches (' + standardSandwiches2 + '), resulting in ' + familyPack + '.';
+
+    var priceDifference2 = -22.50;
+    var absoluteDifference2 = Math.abs(priceDifference2);
+    var finalAdjustment = absoluteDifference2 * 2;
+    document.getElementById('finalAdjustmentResult').innerText = finalAdjustment;
+    document.getElementById('finalAdjustmentExplanation').innerText = 'Doubling the absolute value of the price difference ' + absoluteDifference2 + ' results in ' + finalAdjustment + '.';
+
+    var basePrice2 = 160;
+    var taxRate = 0.12;
+    var totalPrice = basePrice2 + (basePrice2 * taxRate);
+    var roundedTotal = Math.round(totalPrice * 100) / 100;
+    document.getElementById('roundedTotalResult').innerText = roundedTotal;
+    document.getElementById('roundedTotalExplanation').innerText = 'The price ' + basePrice2 + ' with tax applied (' + totalPrice + ') is rounded to ' + roundedTotal + '.';
+
+    var dailySales2 = [2750, 3100, 2950, 3300, 3050];
+    var minSales = Math.min(...dailySales2);
+    var maxSales2 = Math.max(...dailySales2);
+    var averageSales = (minSales + maxSales2) / 2;
+    document.getElementById('averageSalesResult').innerText = averageSales;
+    document.getElementById('averageSalesExplanation').innerText = 'The average sales are calculated as the average of the minimum (' + minSales + ') and maximum (' + maxSales2 + ') sales, resulting in ' + averageSales + '.';
+  </script>
+
+</body>
+</html>
+
+</body> 
+</html>
